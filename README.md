@@ -1,13 +1,21 @@
-# Todoist Node
+# nodeist
 
 ### Install
 ```bash
 npm i nodeist
 ```
 
+### Use
+```javascript
+const nodeist = require('nodeist');
+```
+
+### Token
+[Todoist personal API token](https://nodeist.com/Users/viewPrefs?page=integrations)
+
 ### Config
 ```javscript
-url: 'https://api.todoist.com/rest/v1/',
+url: 'https://api.nodeist.com/rest/v1/',
 token: 'token'
 ```
 
@@ -20,13 +28,13 @@ const data = {
 };
 ```
 ```javascript
-let run = todoist.project.createProject(data);
+let run = nodeist.project.createProject(data);
 ```
 
 #### get
 ```javascript
-let run = todoist.project.getProjects();
-let run = todoist.project.getProject(id);
+let run = nodeist.project.getProjects();
+let run = nodeist.project.getProject(id);
 ```
 
 #### update
@@ -36,12 +44,12 @@ const data = {
 };
 ```
 ```javascript
-let run = todoist.project.updateProject(id, data);
+let run = nodeist.project.updateProject(id, data);
 ```
 
 #### delete
 ```javascript
-let run = todoist.project.deleteProject(id);
+let run = nodeist.project.deleteProject(id);
 ```
 
 
@@ -57,13 +65,13 @@ const data = {
 };
 ```
 ```javascript
-let run todoist.task.createTask(data);
+let run nodeist.task.createTask(data);
 ```
 
 #### get
 ```javascript
-let run = todoist.task.getTasks();
-let run todoist.task.getTask(id);
+let run = nodeist.task.getTasks();
+let run nodeist.task.getTask(id);
 ```
 
 #### update
@@ -73,22 +81,56 @@ const data = {
 };
 ```
 ```javascript
-let run todoist.task.updateTask(id, data);
+let run nodeist.task.updateTask(id, data);
 ```
 
 #### close
 ```javascript
-let run todoist.task.closeTask(id);
+let run nodeist.task.closeTask(id);
 ```
 
 #### reopen
 ```javascript
-let run todoist.task.reopenTask(id);
+let run nodeist.task.reopenTask(id);
 ```
 
 #### delete
 ```javascript
-let run todoist.task.deleteTask(id);
+let run nodeist.task.deleteTask(id);
+```
+
+
+### Labels (premium only)
+
+#### create
+```json
+const data = {
+    "name": "Dummy Label"
+};
+```
+```javascript
+let run = nodeist.label.createLabel(data);
+```
+
+#### get
+```javascript
+let run = nodeist.label.getLabels();
+let run = nodeist.label.getLabel(id);
+```
+
+#### update
+```json
+const data = {
+    "name": "Dummy Label"
+};
+```
+```javascript
+let run = nodeist.label.updateLabel(id, data);
+```
+
+#### delete
+```javascript
+let run = nodeist.label.deleteLabel(id);
 ```
 
 ### Run cross all examples
