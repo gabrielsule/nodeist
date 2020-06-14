@@ -1,0 +1,21 @@
+{
+  "name": "nodeist",
+  "version": "1.0.0",
+  "description": "A Node.js project consuming Todoist api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["todoist", "task", "project", "node"],
+  "author": {
+    "name": "Gabriel Sule",
+    "email": "gabrielsule@gmail.com",
+    "url": "https://github.com/gabrielsule"
+  },
+  "repository": "github:gabrielsule/todoist-node",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "uuid": "^8.1.0"
+  }
+}
